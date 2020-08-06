@@ -2,6 +2,7 @@
 
 @php
     $kt_logo_image = 'logo-light.png';
+    $AL_logo_image = 'ALBARKA-LOGO-LIGHT.png';
 @endphp
 
 @if (config('layout.brand.self.theme') === 'light')
@@ -16,7 +17,7 @@
     <div class="brand flex-column-auto {{ Metronic::printClasses('brand', false) }}" id="kt_brand">
         <div class="brand-logo">
             <a href="{{ url('/') }}">
-                <img alt="{{ config('app.name') }}" src="{{ asset('media/logos/'.$kt_logo_image) }}"/>
+                <img alt="{{ config('app.name') }}" src="{{ asset('media/logos/'.$AL_logo_image) }}"/>
             </a>
         </div>
 

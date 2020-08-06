@@ -80,45 +80,11 @@
         @endif
     @endif
 
-    {{-- My Cart --}}
-    @if (config('layout.extras.cart.display'))
-        <div class="dropdown">
-            {{-- Toggle --}}
-            <div class="topbar-item"  data-toggle="dropdown" data-offset="10px,0px">
-                <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
-                    {{ Metronic::getSVG("media/svg/icons/Shopping/Cart3.svg", "svg-icon-xl svg-icon-primary") }}
-                </div>
-            </div>
-
-            {{-- Dropdown --}}
-            <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-xl dropdown-menu-anim-up">
-                <form>
-                    @include('layout.partials.extras.dropdown._cart')
-                </form>
-            </div>
-        </div>
-    @endif
-
     {{-- Quick panel --}}
     @if (config('layout.header.topbar.quick-panel.display'))
         <div class="topbar-item">
             <div class="btn btn-icon btn-clean btn-lg mr-1" id="kt_quick_panel_toggle">
                 {{ Metronic::getSVG("media/svg/icons/Layout/Layout-4-blocks.svg", "svg-icon-xl svg-icon-primary") }}
-            </div>
-        </div>
-    @endif
-
-    {{-- Languages --}}
-    @if (config('layout.extras.languages.display'))
-        <div class="dropdown">
-            <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-                <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
-                    <img class="h-20px w-20px rounded-sm" src="{{ asset('media/svg/flags/226-united-states.svg') }}" alt=""/>
-                </div>
-            </div>
-
-            <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
-                @include('layout.partials.extras.dropdown._languages')
             </div>
         </div>
     @endif

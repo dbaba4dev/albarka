@@ -42,9 +42,9 @@
         <script>var HOST_URL = "{{ route('quick-search') }}";</script>
 
         {{-- Global Config (global config for global JS scripts) --}}
-        <script>
-            var KTAppSettings = {!! json_encode(config('layout.js'), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES) !!};
-        </script>
+{{--        <script>--}}
+{{--            var KTAppSettings = {!! json_encode(config('layout.js'), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES) !!};--}}
+{{--        </script>--}}
 
         {{-- Global Theme JS Bundle (used by all pages)  --}}
         @foreach(config('layout.resources.js') as $script)
