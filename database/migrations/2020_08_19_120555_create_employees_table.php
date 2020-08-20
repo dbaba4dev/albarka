@@ -15,7 +15,26 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('category_id')->unsigned();
+            $table->string('first_name');
+            $table->string('surname');
+            $table->float('factor')->default(0);
+            $table->float('balance')->default(0);
+            $table->float('salary')->default(0);
+            $table->date('joined');
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('address');
+            $table->unsignedInteger('lga_id');
+            $table->unsignedInteger('state_id');
+            $table->string('avatar');
+            $table->string('next_of_king_name')->nullable();
+            $table->string('next_of_king_relationship')->nullable();
+            $table->string('next_of_king_phone')->nullable();
+            $table->string('next_of_king_address')->nullable();
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
