@@ -82,16 +82,17 @@
                     <div class="card-body p-0">
                         <!--begin::Form-->
                         @include('layout._message')
-                        <form action="{{route('employeeCategories.store')}}" method="POST" >
+                        <form action="{{route('employeeCategories.update', $category->id )}}" method="POST" >
+                            {{method_field('PUT')}}
                             @csrf
 
                             <div class="row justify-content-center">
                                 <div class="form-group col-md-4 col-sm-6 justify-content-center mt-3">
                                     <label for="name"><span class="text-danger">*</span> <strong>Category name</strong></label>
                                     <div class="input-group">
-                                        <input type="text"  class="form-control {{$errors->has('name') ? 'is-invalid' : ''}}" name="name" placeholder="Enter Category Name ..."/>
+                                        <input type="text"  class="form-control {{$errors->has('name') ? 'is-invalid' : ''}}" name="name" placeholder="Enter Category Name ..." value="{{$category->name}}"/>
                                         <div class="input-group-append">
-                                            <button class="btn btn-outline-primary" type="submit">Add New</button>
+                                            <button class="btn btn-outline-primary" type="submit">Update Category</button>
                                         </div>
                                         @if($errors->has('name'))
                                             <div class="invalid-feedback">
@@ -116,12 +117,13 @@
                 <div class="card-header"><h3>Employee's Categories</h3></div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="blueTable table table-sm" id="category_list">
+                        <table class="blueTable table" id="category_list">
                             <thead style="color: white; font-weight: bold">
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Created On</th>
+                                <th></th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -132,15 +134,14 @@
                                     <td>{{$category->name}}</td>
                                     <td>{{\Carbon\Carbon::parse($category->created_at)->toFormattedDateString()}}</td>
                                     <td class="text-center">
-                                        <div class="row justify-content-center " style="margin: 0">
-                                            <a href="{{url('employeeCategories/'.$category->id.'/edit')}}" role="button" style="margin-top: 8px; "> <i class="fa fa-pen text-success"></i> |</a>
-                                            <form action="{{route('employeeCategories.destroy', $category->id )}}" method="POST" >
-                                                {{method_field('DELETE')}}
-                                                @csrf
-                                                <button rel="{{$category->id}}" type="submit" role="button" class="btn btn-sm delete" style="color: darkred"> <i class="fa fa-trash text-danger"></i> </button>
-                                            </form>
-                                        </div>
-
+                                        <a href="{{url('employeeCategories/'.$category->id.'/edit')}}" role="button" > <i class="fa fa-pen text-success"></i> </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <form action="{{route('employeeCategories.destroy', $category->id )}}" method="POST" >
+                                            {{method_field('DELETE')}}
+                                            @csrf
+                                            <button type="submit" role="button" class="btn btn-sm" onclick="return confirm('Are you sure?')" style="color: darkred"> <i class="fa fa-trash text-danger"></i> </button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
@@ -209,36 +210,5 @@
                 ]
             } );
         } );
-    </script>
-
-    <script>
-        $(document).on('click', '.delete', function (e) {
-            Swal.fire({
-                title: "Are you sure?",
-                text: "You won't be able to revert this!",
-            icon: "warning",
-                showCancelButton: true,
-                confirmButtonText: "Yes, delete it!",
-                cancelButtonText: "No, cancel!",
-                reverseButtons: true
-        }).then(function(result) {
-                if (result.value) {
-                    Swal.fire(
-                        "Deleted!",
-                        "Your file has been deleted.",
-                        "success",
-                    )
-                    // result.dismiss can be "cancel", "overlay",
-                    // "close", and "timer"
-                } else if (result.dismiss === "cancel") {
-                    Swal.fire(
-                        "Cancelled",
-                        "Your imaginary file is safe :)",
-                        "error"
-                    )
-                }
-            });
-
-        });
     </script>
 @endsection

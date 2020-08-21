@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Http\Requests\EmployeeCategoryRequest;
-//use Illuminate\Http\Request;
-
 class CategoryController extends Controller
 {
     /**
@@ -36,25 +34,19 @@ class CategoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Category $category)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $categories = Category::all();
+        $page_title = 'Edit Employee Categories';
+        $page_description = 'Update an existing Categories';
+
+        return view('admin.employees.categories.edit', compact('page_title', 'page_description', 'category', 'categories'));
     }
 
     /**
@@ -64,9 +56,18 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(EmployeeCategoryRequest $request, $id)
     {
-        //
+        if (Category::findOrFail($id)->update(['name'=>$request->name]))
+        {
+            return redirect('/employeeCategories')->with('success', 'Category Updated Successfully');
+        }
+        else
+        {
+            return redirect()->back()->with('error', 'Error');
+        }
+
+
     }
 
     /**
@@ -75,8 +76,15 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+//        dd($id);
+        if (Category::findOrFail($id)->delete())
+        {
+            return redirect('/employeeCategories')->with('success', 'Category Deleted Successfully');
+        }else
+        {
+            return redirect()->back()->with('error','Error');
+        }
     }
 }

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16be16e1-fec4-48fc-bf79-8add0b387a71" name="Default Changelist" comment="" />
+    <list default="true" id="16be16e1-fec4-48fc-bf79-8add0b387a71" name="Default Changelist" comment="EmployeeCategory Update and Delete Functionality Added">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/employees/categories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/employees/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employees/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/_message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/_message.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +173,7 @@
       <updated>1596626063199</updated>
       <workItem from="1596626065418" duration="8955000" />
       <workItem from="1597837316950" duration="35661000" />
+      <workItem from="1597997972623" duration="7666000" />
     </task>
     <servers />
   </component>
@@ -184,5 +192,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="EmployeeCategory Update and Delete Functionality Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="EmployeeCategory Update and Delete Functionality Added" />
   </component>
 </project>
