@@ -16,6 +16,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -126,9 +127,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/git/bin/git.exe" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\albarka\resources\views\layout" />
       <recent name="C:\laragon\www\albarka\resources\views\admin\employees" />
     </key>
   </component>
@@ -161,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596626063199</updated>
       <workItem from="1596626065418" duration="8955000" />
-      <workItem from="1597837316950" duration="10039000" />
+      <workItem from="1597837316950" duration="35661000" />
     </task>
     <servers />
   </component>

@@ -16,10 +16,10 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->bigInteger('payment_type_id')->unsigned();
+//            $table->bigInteger('payment_type_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('payment_type_id')->references('id')->on('payment_types');
+//            $table->foreign('payment_type_id')->references('id')->on('payment_types');
         });
     }
 

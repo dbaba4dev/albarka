@@ -9,10 +9,17 @@ class PagesController extends Controller
     public function index()
     {
         $page_title = 'Dashboard';
-        $page_description = 'Some description for the page';
+//        $page_description = 'Some description for the page';
 
         return view('pages.dashboard', compact('page_title', 'page_description'));
     }
+//    public function employeeAdd()
+//    {
+//        $page_title = 'New User';
+//        $page_description = 'Enter user details and submit';
+//
+//        return view('admin.employees.add', compact('page_title', 'page_description'));
+//    }
 
     /**
      * Demo methods below

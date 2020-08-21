@@ -22,3 +22,6 @@ Route::get('/quick-search', 'PagesController@quickSearch')->name('quick-search')
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('employees', 'EmployeeController');
+Route::resource('employeeCategories', 'CategoryController');

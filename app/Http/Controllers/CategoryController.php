@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use Illuminate\Http\Request;
+use App\Http\Requests\EmployeeCategoryRequest;
+//use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -14,17 +15,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $page_title = 'Employee Categories';
+        $page_description = 'Create a new Employee Categories';
+        $categories = Category::all();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view('admin.employees.categories.index', compact('page_title', 'page_description', 'categories'));
     }
 
     /**
@@ -33,9 +28,11 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EmployeeCategoryRequest $request)
     {
-        //
+        $data = $request->all();
+        Category::create([ 'name'=>$data['name'] ]);
+        return redirect('/employeeCategories')->with('success', 'Category created Successfully');
     }
 
     /**

@@ -24,104 +24,26 @@ return [
             'submenu' => [
                 [
                     'title' => 'Employees',
+                    'root' => true,
+                    'page' => '/employees/index',
                     'bullet' => 'dot',
-                    /*'submenu' => [
-                        [
-                            'title' => 'List - Default',
-                            'page' => 'test',
-                        ],
-                        [
-                            'title' => 'List - Datatable',
-                            'page' => 'custom/apps/user/list-datatable'
-                        ],
-                        [
-                            'title' => 'List - Columns 1',
-                            'page' => 'custom/apps/user/list-columns-1'
-                        ],
-                        [
-                            'title' => 'List - Columns 2',
-                            'page' => 'custom/apps/user/list-columns-2'
-                        ],
-                        [
-                            'title' => 'Add User',
-                            'page' => 'custom/apps/user/add-user'
-                        ],
-                        [
-                            'title' => 'Edit User',
-                            'page' => 'custom/apps/user/edit-user'
-                        ],
-                    ]*/
                 ],
                 [
                     'title' => 'New Employee',
+                    'root' => true,
+                    'page' => '/employees/create',
                     'bullet' => 'dot',
-                   /* 'submenu' => [
-                        [
-                            'title' => 'Profile 1',
-                            'bullet' => 'line',
-                            'submenu' => [
-                                [
-                                    'title' => 'Overview',
-                                    'page' => 'custom/apps/profile/profile-1/overview'
-                                ],
-                                [
-                                    'title' => 'Personal Information',
-                                    'page' => 'custom/apps/profile/profile-1/personal-information'
-                                ],
-                                [
-                                    'title' => 'Account Information',
-                                    'page' => 'custom/apps/profile/profile-1/account-information'
-                                ],
-                                [
-                                    'title' => 'Change Password',
-                                    'page' => 'custom/apps/profile/profile-1/change-password'
-                                ],
-                                [
-                                    'title' => 'Email Settings',
-                                    'page' => 'custom/apps/profile/profile-1/email-settings'
-                                ]
-                            ]
-                        ],
-                        [
-                            'title' => 'Profile 2',
-                            'page' => 'custom/apps/profile/profile-2'
-                        ],
-                        [
-                            'title' => 'Profile 3',
-                            'page' => 'custom/apps/profile/profile-3'
-                        ],
-                        [
-                            'title' => 'Profile 4',
-                            'page' => 'custom/apps/profile/profile-4'
-                        ]
-                    ]*/
                 ],
-                /*[
-                    'title' => 'Contacts',
+                [
+                    'title' => 'Categories',
+                    'root' => true,
+                    'page' => '/employeeCategories',
                     'bullet' => 'dot',
-                    'submenu' => [
-                        [
-                            'title' => 'List - Columns',
-                            'page' => 'custom/apps/contacts/list-columns'
-                        ],
-                        [
-                            'title' => 'List - Datatable',
-                            'page' => 'custom/apps/contacts/list-datatable'
-                        ],
-                        [
-                            'title' => 'View Contact',
-                            'page' => 'custom/apps/contacts/view-contact'
-                        ],
-                        [
-                            'title' => 'Add Contact',
-                            'page' => 'custom/apps/contacts/add-contact'
-                        ],
-                        [
-                            'title' => 'Edit Contact',
-                            'page' => 'custom/apps/contacts/edit-contact'
-                        ]
-                    ]
                 ],
+                ]
+            ]
+        ]
+                /*
                 [
                     'title' => 'Projects',
                     'bullet' => 'dot',
@@ -238,7 +160,7 @@ return [
                         'type' => 'label-danger label-inline',
                         'value' => 'new'
                     ]
-                ]*/
+                ]
             ]
         ],
      /*   [
@@ -831,6 +753,6 @@ return [
                 ]
             ]
         ]*/
-    ]
+//    ]
 
 ];

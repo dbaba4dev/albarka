@@ -4,22 +4,30 @@
     <div class="{{ Metronic::printClasses('subheader-container', false) }} d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 
 		{{-- Info --}}
-        <div class="d-flex align-items-center flex-wrap mr-1">
+        <div class="d-flex align-items-center flex-wrap mr-2">
 
 			{{-- Page Title --}}
-            <h5 class="text-dark font-weight-bold my-2 mr-5">
-                {{ @$page_title }}
+            <h5 class="text-dark font-weight-bold my-2 mr-5">{{ @$page_title }} </h5>
 
+            {{-- Separator --}}
+            <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
+
+            <span class="text-dark-75 font-weight-bold" id="kt_subheader_total">
                 @if (isset($page_description) && config('layout.subheader.displayDesc'))
-                    <small>{{ @$page_description }}</small>
+                    <small>
+                        {{ @$page_description }}
+                    </small>
                 @endif
-            </h5>
+            </span>
+
+
+
 
             @if (!empty($page_breadcrumbs))
-				{{-- Separator --}}
+				 Separator
                 <div class="subheader-separator subheader-separator-ver my-2 mr-4 d-none"></div>
 
-				{{-- Breadcrumb --}}
+				 Breadcrumb
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2">
                     <li class="breadcrumb-item"><a href="#"><i class="flaticon2-shelter text-muted icon-1x"></i></a></li>
                     @foreach ($page_breadcrumbs as $k => $item)

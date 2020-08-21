@@ -24,7 +24,10 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        $page_title = 'New Employee';
+        $page_description = 'Enter employee details and submit';
+
+        return view('admin.employees.add', compact('page_title', 'page_description'));
     }
 
     /**
