@@ -28,7 +28,7 @@ class CreateEmployeesTable extends Migration
             $table->string('address');
             $table->unsignedInteger('lga_id');
             $table->unsignedInteger('state_id');
-            $table->string('avatar')->nullable();
+            $table->bigInteger('photo_id')->nullable()->unsigned();
             $table->string('next_of_king_name')->nullable();
             $table->string('next_of_king_relationship')->nullable();
             $table->string('next_of_king_phone')->nullable();

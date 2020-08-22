@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Employee;
+use App\Photo;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -40,11 +41,23 @@ class EmployeeController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return string
      */
     public function store(Request $request)
     {
         $data = $request->all();
+//        profile_avatar
+
+        if ($file = $request->file('profile_avatar'))
+        {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images/employees', $name);
+
+            $photo = Photo::create(['file'=>$name]);
+            $photo_id = $photo->id;
+        }
+
+        $photo_id = !empty($photo_id) ? $photo_id : null;
 
          $firstname = $data['firstname'];
          $lastname = $data['lastname'];
@@ -80,6 +93,7 @@ class EmployeeController extends Controller
             'next_of_king_relationship'=>$relation_kin,
             'next_of_king_phone'=>$phone_kin,
             'next_of_king_address'=>$address_kin,
+            'photo_id'=>$photo_id,
         ]);
 
         $notification = array(
