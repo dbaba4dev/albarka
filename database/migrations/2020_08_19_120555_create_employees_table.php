@@ -22,13 +22,13 @@ class CreateEmployeesTable extends Migration
             $table->float('balance')->default(0);
             $table->float('salary')->default(0);
             $table->enum('payment_type',['commission','salary','both'])->default('commission'); // 0: commission, 1: salary, 2: both
-            $table->date('joined');
+            $table->text('joined')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('address');
             $table->unsignedInteger('lga_id');
             $table->unsignedInteger('state_id');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->string('next_of_king_name')->nullable();
             $table->string('next_of_king_relationship')->nullable();
             $table->string('next_of_king_phone')->nullable();

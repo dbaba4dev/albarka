@@ -25,3 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('employees', 'EmployeeController');
 Route::resource('employeeCategories', 'CategoryController');
+
+/*======================Display Local Government of each state Route==================================*/
+Route::get('employees/state/{id}', 'EmployeeController@getLgas');
