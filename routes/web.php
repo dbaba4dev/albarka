@@ -14,17 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard', 'PagesController@index');
+Route::match(['get','post'],'/login', 'AdminController@login')->name('admin.login');
+
+Route::group(['middleware'=>['auth']], function (){
+    Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+
+    Route::resource('employees', 'EmployeeController');
+    Route::resource('employeeCategories', 'CategoryController');
+});
+
+//Route::get('/dashboard', 'PagesController@index');
 
 // Quick search dummy route to display html elements in search dropdown (header search)
 Route::get('/quick-search', 'PagesController@quickSearch')->name('quick-search');
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('employees', 'EmployeeController');
-Route::resource('employeeCategories', 'CategoryController');
-
 /*======================Display Local Government of each state Route==================================*/
-Route::get('employees/state/{id}', 'EmployeeController@getLgas');
+Route::get('/state/{id}', 'EmployeeController@getLgas');
+
+
+Route::get('/logout', 'AdminController@logout')->name('logout');

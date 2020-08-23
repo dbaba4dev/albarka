@@ -48,21 +48,18 @@
 		{{-- Nav --}}
 		<div class="navi navi-spacer-x-0 p-0">
 		    {{-- Item --}}
-		    <a href="#" class="navi-item">
+		    <a href="{{route('logout')}}" class="navi-item">
 		        <div class="navi-link">
 		            <div class="symbol symbol-40 bg-light mr-3">
 		                <div class="symbol-label">
-							{{ Metronic::getSVG("media/svg/icons/General/Notification2.svg", "svg-icon-md svg-icon-success") }}
+							{{ Metronic::getSVG("media/svg/icons/Navigation/Sign-out.svg", "svg-icon-md svg-icon-success") }}
 						</div>
 		            </div>
 		            <div class="navi-text">
 		                <div class="font-weight-bold">
-		                    My Profile
+		                    Logout
 		                </div>
-		                <div class="text-muted">
-		                    Account settings and more
-		                    <span class="label label-light-danger label-inline font-weight-bold">update</span>
-		                </div>
+
 		            </div>
 		        </div>
 		    </a>

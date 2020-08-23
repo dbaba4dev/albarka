@@ -180,7 +180,7 @@ class EmployeeController extends Controller
         {
             $data['factor'] = 0;
         }
-        
+
         if ($file = $request->file('profile_avatar'))
         {
             $name = time() . $file->getClientOriginalName();

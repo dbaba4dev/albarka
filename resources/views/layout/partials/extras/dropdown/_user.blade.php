@@ -21,7 +21,7 @@
             </div>
 
             {{-- Text --}}
-            <div class="text-white m-0 flex-grow-1 mr-3 font-size-h5">Sean Stone</div>
+            <div class="text-white m-0 flex-grow-1 mr-3 font-size-h5">{{auth()->user()}}</div>
         </div>
         <span class="label label-success label-lg font-weight-bold label-inline">3 messages</span>
     </div>
@@ -33,16 +33,16 @@
     <a href="#" class="navi-item px-8">
         <div class="navi-link">
             <div class="navi-icon mr-2">
-                <i class="flaticon2-calendar-3 text-success"></i>
+                <i class="flaticon-logout text-success"></i>
             </div>
             <div class="navi-text">
                 <div class="font-weight-bold">
-                    My Profile
+                    Logout
                 </div>
-                <div class="text-muted">
-                    Account settings and more
-                    <span class="label label-light-danger label-inline font-weight-bold">update</span>
-                </div>
+{{--                <div class="text-muted">--}}
+{{--                    Account settings and more--}}
+{{--                    <span class="label label-light-danger label-inline font-weight-bold">update</span>--}}
+{{--                </div>--}}
             </div>
         </div>
     </a>

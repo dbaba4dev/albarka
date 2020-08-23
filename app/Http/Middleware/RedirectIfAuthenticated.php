@@ -20,6 +20,9 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             return redirect(RouteServiceProvider::HOME);
+        }else
+        {
+            return redirect()->route('admin.login')->with('error', 'Please login to access');
         }
 
         return $next($request);
