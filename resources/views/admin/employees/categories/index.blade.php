@@ -213,6 +213,8 @@
 
     <script>
         $(document).on('click', '.delete', function (e) {
+            e.preventDefault();
+            var id = $(this).attr('rel');
             Swal.fire({
                 title: "Are you sure?",
                 text: "You won't be able to revert this!",
@@ -227,8 +229,18 @@
                         "Deleted!",
                         "Your file has been deleted.",
                         "success",
-                    )
-                    // result.dismiss can be "cancel", "overlay",
+                        $.ajax({
+                            url: '/employeeCategories/'+id,
+                            type: 'DELETE',
+                            success: function() {
+
+                            }
+                        }),
+
+                    );
+                    location.reload()
+                     // window.location.href = '/employeeCategories/'+id;
+                                    // result.dismiss can be "cancel", "overlay",
                     // "close", and "timer"
                 } else if (result.dismiss === "cancel") {
                     Swal.fire(
@@ -238,6 +250,7 @@
                     )
                 }
             });
+
 
         });
     </script>

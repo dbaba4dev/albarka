@@ -19,6 +19,7 @@
                 <!--begin::Card-->
                 <div class="card card-custom card-transparent">
                     <div class="card-body p-0">
+                    @include('layout._message')
                         <!--begin::Wizard-->
                         <div class="wizard wizard-4" id="kt_wizard" data-wizard-state="step-first" data-wizard-clickable="true">
                             <!--begin::Wizard Nav-->
@@ -95,7 +96,8 @@
                                     <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
                                         <div class="col-xl-12 col-xxl-10">
                                             <!--begin::Wizard Form-->
-                                            <form class="form" id="kt_form" enctype="multipart/form-data">
+                                            <form action="{{route('employees.store')}}" method="post" class="form" id="kt_form" enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="row justify-content-center">
                                                     <div class="col-xl-9">
                                                         <!--begin::Wizard Step 1-->
@@ -110,7 +112,7 @@
 
                                                                         <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
                                                                             <i class="fa fa-pen icon-sm text-muted"></i>
-                                                                            <input type="file" name="profile_avatar" id="avatar" accept=".png, .jpg, .jpeg"/>
+                                                                            <input type="file" name="profile_avatar" id="avatar" accept=".png, .jpg, .jpeg" />
                                                                             <input type="hidden" name="profile_avatar_remove"/>
                                                                         </label>
 
@@ -125,8 +127,13 @@
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">First Name</label>
                                                                 <div class="col-lg-9 col-xl-9">
-                                                                    <input class="form-control form-control-solid form-control-lg" name="firstname" id="firstname" type="text" value="" />
+                                                                    <input class="form-control form-control-solid form-control-lg {{$errors->has('firstname') ? 'is-invalid' : ''}}" name="firstname" id="firstname" type="text" value="{{old('firstname')}}" />
                                                                 </div>
+                                                                @if($errors->has('firstname'))
+                                                                    <div class="invalid-feedback">
+                                                                        <strong>{{$errors->first('firstname')}}</strong>
+                                                                    </div>
+                                                                @endif
                                                             </div>
                                                             <!--end::Group-->
                                                             <!--begin::Group-->
@@ -156,10 +163,15 @@
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <div class="input-group input-group-solid input-group-lg">
                                                                         <div class="input-group-prepend"><span class="input-group-text"><i class="la la-phone"></i></span></div>
-                                                                        <input type="text" class="form-control form-control-solid form-control-lg" id="phone" name="phone" value="" placeholder="Phone" />
+                                                                        <input type="text" class="form-control form-control-solid form-control-lg {{$errors->has('phone') ? 'is-invalid' : ''}}" id="phone" name="phone" value="" placeholder="Phone" />
                                                                     </div>
                                                                     <span class="form-text text-muted">Enter valid phone number(e.g: 08022669600).</span>
                                                                 </div>
+                                                                @if($errors->has('phone'))
+                                                                    <div class="invalid-feedback">
+                                                                        <strong>{{$errors->first('phone')}}</strong>
+                                                                    </div>
+                                                                @endif
                                                             </div>
                                                             <!--end::Group-->
                                                             <!--begin::Group-->
@@ -185,12 +197,6 @@
                                                                             </span>
                                                                         </div>
                                                                     </div>
-{{--                                                                    <div class="input-group date" data-provide="datepicker">--}}
-{{--                                                                        <input type="text" class="form-control">--}}
-{{--                                                                        <div class="input-group-addon">--}}
-{{--                                                                            <span class="glyphicon glyphicon-th"></span>--}}
-{{--                                                                        </div>--}}
-{{--                                                                    </div>--}}
                                                                 </div>
                                                             </div>
                                                             <!--end::Group-->
@@ -357,7 +363,7 @@
                                                                 </button>
                                                             </div>
                                                             <div>
-                                                                <button type="button" class="btn btn-success font-weight-bolder px-9 py-4" id="submit" data-wizard-type="action-submit">
+                                                                <button type="submit" class="btn btn-success font-weight-bolder px-9 py-4" id="submit" data-wizard-type="action-submit">
                                                                     Submit
                                                                 </button>
 
@@ -483,40 +489,21 @@
             }
         });
 
-        $('#submit').on('click', function (e) {
-            var fd = new FormData($("#kt_form")[0]);
-            fd.append('SaveAccountChanges', true);
-
-            // var $image = $('#avatar').val();
-            // var $firstname = $('#firstname').val();
-            // var $lastname = $('#lastname').val();
-            // var $category_id = $('#category').val();
-            // var $phone = $('#phone').val();
-            // var $email = $('#email').val();
-            // var $joined = $('#joined').val();
-            // var $payment_type = $('#payment_type').val();
-            // var $factor = $('#factor').val();
-            // var $address = $('#address').val();
-            // var $state_id = $('#state').val();
-            // var $lga_id = $('#lga').val();
-            // var $name_kin = $('#name_kin').val();
-            // var $relation_kin = $('#relationship_kin').val();
-            // var $phone_kin = $('#phone_kin').val();
-            // var $address_kin = $('#address_kin').val();
-
-            $.ajax({
-                url : '/employees',
-                type: 'POST',
-                data: fd,
-                contentType: false,
-                processData: false,
-                // data: {firstname:$firstname, lastname:$lastname, category_id:$category_id, phone:$phone, email:$email,
-                //     joined:$joined, payment_type:$payment_type, factor:$factor, address:$address, state_id:$state_id,
-                //     lga_id:$lga_id, name_kin:$name_kin, relation_kin:$relation_kin, phone_kin:$phone_kin, address_kin:$address_kin, image:$image},
-            }).done(function(response){ //
-                console.log(response)
-            });
-        })
+        // $('#submit').on('click', function () {
+        //     var fd = new FormData($("#kt_form")[0]);
+        //     fd.append('SaveAccountChanges', true);
+        //
+        //     $.ajax({
+        //         url : '/employees',
+        //         type: 'POST',
+        //         data: fd,
+        //         contentType: false,
+        //         processData: false,
+        //
+        //     }).done(function(){ //
+        //         // location.reload();
+        //     });
+        // })
 
     });
 

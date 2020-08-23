@@ -52,10 +52,8 @@
             <script src="{{ asset($script) }}" type="text/javascript"></script>
         @endforeach
 
-        {{-- Includable JS --}}
-        @yield('scripts')
-
         <script>
+            // $(function() {
             toastr.options = {
                 "closeButton": false,
                 "debug": false,
@@ -73,7 +71,7 @@
                 "hideMethod": "fadeOut"
             };
 
-            @if(Session::has('message'))
+                @if(Session::has('message'))
             var type = "{{ Session::get('alert-type', 'info') }}";
             switch(type){
                 case 'info':
@@ -93,7 +91,13 @@
                     break;
             }
             @endif
+            // });
         </script>
+
+        {{-- Includable JS --}}
+        @yield('scripts')
+
+
         <script>
             $(function () {
                 $.ajaxSetup({

@@ -30,7 +30,12 @@ class CategoryController extends Controller
     {
         $data = $request->all();
         Category::create([ 'name'=>$data['name'] ]);
-        return redirect('/employeeCategories')->with('success', 'Category created Successfully');
+        $notification = array(
+            'message' => 'Category created Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect('/employeeCategories')->with($notification);
+//        return redirect('/employeeCategories')->with('success', 'Category created Successfully');
     }
 
     /**
@@ -60,7 +65,11 @@ class CategoryController extends Controller
     {
         if (Category::findOrFail($id)->update(['name'=>$request->name]))
         {
-            return redirect('/employeeCategories')->with('success', 'Category Updated Successfully');
+            $notification = array(
+                'message' => 'Category Updated Successfully',
+                'alert-type' => 'success'
+            );
+            return redirect('/employeeCategories')->with($notification);
         }
         else
         {
@@ -78,10 +87,14 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-//        dd($id);
         if (Category::findOrFail($id)->delete())
         {
-            return redirect('/employeeCategories')->with('success', 'Category Deleted Successfully');
+            $notification = array(
+                'message' => 'Category deleted Successfully',
+                'alert-type' => 'warning'
+            );
+            return redirect('/employeeCategories')->with($notification);
+//            return redirect('/employeeCategories')->with('success', 'Category Deleted Successfully');
         }else
         {
             return redirect()->back()->with('error','Error');

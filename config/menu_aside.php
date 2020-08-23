@@ -25,7 +25,7 @@ return [
                 [
                     'title' => 'Employees',
                     'root' => true,
-                    'page' => '/employees/index',
+                    'page' => '/employees',
                     'bullet' => 'dot',
                 ],
                 [

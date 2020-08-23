@@ -25,7 +25,8 @@ class EmployeeRequest extends FormRequest
     {
         return [
             'category_id'=>'required',
-//            'category_id'=>'required|max:11|unique:categories',
+            'firstname'=>'required',
+            'lastname'=>'required'
         ];
     }
 
@@ -37,7 +38,9 @@ class EmployeeRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Employee Category is required!',
+            'category_id.required' => 'Employee Category is required!',
+            'first_name.required' => 'First Name  is required!',
+            'surname.required' => 'Surname is required!'
         ];
     }
 }

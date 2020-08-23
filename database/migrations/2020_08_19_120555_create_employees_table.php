@@ -23,6 +23,7 @@ class CreateEmployeesTable extends Migration
             $table->float('salary')->default(0);
             $table->enum('payment_type',['commission','salary','both'])->default('commission'); // 0: commission, 1: salary, 2: both
             $table->text('joined')->nullable();
+            $table->tinyInteger('status')->default(1);
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('address');
