@@ -1,13 +1,13 @@
 {{-- Header --}}
 @if (config('layout.extras.notifications.dropdown.style') == 'light')
-    <div class="d-flex flex-column pt-12 bg-dark-o-5 rounded-top">
-        {{-- Title --}}
+{{--    <div class="d-flex flex-column pt-12 bg-dark-o-5 rounded-top">
+        --}}{{-- Title --}}{{--
         <h4 class="d-flex flex-center">
             <span class="text-dark">User Notifications</span>
             <span class="btn btn-text btn-success btn-sm font-weight-bold btn-font-md ml-2">23 new</span>
         </h4>
 
-        {{-- Tabs --}}
+        --}}{{-- Tabs --}}{{--
         <ul class="nav nav-bold nav-tabs nav-tabs-line nav-tabs-line-3x nav-tabs-primary mt-3 px-8" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active show" data-toggle="tab" href="#topbar_notifications_notifications"  >Alerts</a>
@@ -19,7 +19,7 @@
                 <a class="nav-link" data-toggle="tab" href="#topbar_notifications_logs"  >Logs</a>
             </li>
         </ul>
-    </div>
+    </div>--}}
 @else
     <div class="d-flex flex-column pt-12 bgi-size-cover bgi-no-repeat rounded-top" style="background-image: url('{{ asset('media/misc/bg-1.jpg') }}')">
         {{-- Title --}}
@@ -33,9 +33,9 @@
             <li class="nav-item">
                 <a class="nav-link active show" data-toggle="tab" href="#topbar_notifications_notifications"  >Alerts</a>
             </li>
-            <li class="nav-item">
+            {{--<li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#topbar_notifications_events"  >Events</a>
-            </li>
+            </li>--}}
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#topbar_notifications_logs"  >Logs</a>
             </li>
@@ -164,10 +164,10 @@
     </div>
 
     {{-- Tabpane --}}
-    <div class="tab-pane" id="topbar_notifications_events" role="tabpanel">
-        {{-- Nav --}}
+ {{--   <div class="tab-pane" id="topbar_notifications_events" role="tabpanel">
+        --}}{{-- Nav --}}{{--
         <div class="navi navi-hover scroll my-4" data-scroll="true" data-height="300" data-mobile-height="200">
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -184,7 +184,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -201,7 +201,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -218,7 +218,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -235,7 +235,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -252,7 +252,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -269,7 +269,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -286,7 +286,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -303,7 +303,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -320,7 +320,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -337,7 +337,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -354,7 +354,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -371,7 +371,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -388,7 +388,7 @@
                 </div>
             </a>
 
-            {{-- Item --}}
+            --}}{{-- Item --}}{{--
             <a href="#" class="navi-item">
                 <div class="navi-link">
                     <div class="navi-icon mr-2">
@@ -405,7 +405,7 @@
                 </div>
             </a>
         </div>
-    </div>
+    </div>--}}
 
     {{-- Tabpane --}}
     <div class="tab-pane" id="topbar_notifications_logs" role="tabpanel">

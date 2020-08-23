@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16be16e1-fec4-48fc-bf79-8add0b387a71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_17_200152_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_08_17_200152_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_19_120555_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_09_19_120555_create_employees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/employees/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employees/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/_topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/_topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_notifications.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_notifications.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/offcanvas/_quick-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/offcanvas/_quick-user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -28,6 +21,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,6 +147,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\albarka\public\js" />
       <recent name="C:\laragon\www\albarka\resources\views\layout" />
       <recent name="C:\laragon\www\albarka\resources\views\admin\employees" />
     </key>
@@ -188,7 +189,7 @@
       <workItem from="1597837316950" duration="35661000" />
       <workItem from="1597997972623" duration="23811000" />
       <workItem from="1598087875900" duration="55490000" />
-      <workItem from="1598173501664" duration="15857000" />
+      <workItem from="1598173501664" duration="34409000" />
     </task>
     <task id="LOCAL-00001" summary="EmployeeCategory Update and Delete Functionality Added">
       <created>1598015521232</created>

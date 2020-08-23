@@ -18,9 +18,13 @@ Route::match(['get','post'],'/login', 'AdminController@login')->name('admin.logi
 
 Route::group(['middleware'=>['auth']], function (){
     Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+    Route::get('/admin/settings', 'AdminController@adminSettings')->name('admin.settings');
 
     Route::resource('employees', 'EmployeeController');
     Route::resource('employeeCategories', 'CategoryController');
+
+    Route::get('/admin/check-pwd', 'AdminController@chkPassword');
+    Route::post('/admin/update-password', 'AdminController@updatePassword')->name('update.password');
 });
 
 //Route::get('/dashboard', 'PagesController@index');

@@ -56,7 +56,7 @@
     @endif
 
     {{-- Quick Actions --}}
-    @if (config('layout.extras.quick-actions.display'))
+{{--    @if (config('layout.extras.quick-actions.display'))
         @if (config('layout.extras.quick-actions.layout') == 'offcanvas'))
             <div class="topbar-item">
                 <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" id="kt_quick_actions_toggle">
@@ -65,14 +65,14 @@
             </div>
         @else
             <div class="dropdown">
-                {{-- Toggle --}}
+                --}}{{-- Toggle --}}{{--
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
                         {{ Metronic::getSVG("media/svg/icons/Media/Equalizer.svg", "svg-icon-xl svg-icon-primary") }}
                     </div>
                 </div>
 
-                {{-- Dropdown --}}
+                --}}{{-- Dropdown --}}{{--
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
                     @include('layout.partials.extras.dropdown._quick-actions')
                 </div>
@@ -80,14 +80,14 @@
         @endif
     @endif
 
-    {{-- Quick panel --}}
+    --}}{{-- Quick panel --}}{{--
     @if (config('layout.header.topbar.quick-panel.display'))
         <div class="topbar-item">
             <div class="btn btn-icon btn-clean btn-lg mr-1" id="kt_quick_panel_toggle">
                 {{ Metronic::getSVG("media/svg/icons/Layout/Layout-4-blocks.svg", "svg-icon-xl svg-icon-primary") }}
             </div>
         </div>
-    @endif
+    @endif--}}
 
     {{-- User --}}
     @if (config('layout.extras.user.display'))
@@ -95,9 +95,9 @@
             <div class="topbar-item">
                 <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
                     <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                    <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Dee</span>
+                    <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">{{auth()->user()->admin->employee->first_name}}</span>
                     <span class="symbol symbol-35 symbol-light-success">
-                        <span class="symbol-label font-size-h5 font-weight-bold">S</span>
+                        <span class="symbol-label font-size-h5 font-weight-bold">{{substr(auth()->user()->admin->employee->first_name, 0,1)}}</span>
                     </span>
                 </div>
             </div>
@@ -107,9 +107,9 @@
                 <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
                     <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2">
                         <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                        <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Dee</span>
+                        <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">{{auth()->user()->admin->employee->first_name}}</span>
                         <span class="symbol symbol-35 symbol-light-success">
-                            <span class="symbol-label font-size-h5 font-weight-bold">S</span>
+                            <span class="symbol-label font-size-h5 font-weight-bold">{{substr(auth()->user()->admin->employee->first_name, 0,1)}}</span>
                         </span>
                     </div>
                 </div>
