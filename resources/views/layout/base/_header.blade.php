@@ -20,13 +20,15 @@
 
                 <!--begin::Header Menu-->
                 <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
-
+                    <?php
+                        $count = \App\Ticket::where('qty',0)->count();
+                    ?>
                     <!--begin::Header Nav-->
                     <ul class="menu-nav">
                         <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active"
                             data-menu-toggle="click" aria-haspopup="true">
                             <a href="javascript:;" class="menu-link menu-toggle">
-                                <span class="menu-text">Quick Tab &nbsp; <span class="label label-success label-rounded"> 2 </span> </span>
+                                <span class="menu-text">Quick Tab &nbsp; <span class="label label-success label-rounded"> {{$count}} </span> </span>
                                 <i class="menu-arrow"></i>
                             </a>
                             <div class="menu-submenu menu-submenu-classic menu-submenu-left">
@@ -35,7 +37,7 @@
                                         <a href="{{route('tickets')}}" class="menu-link">
                                             <i class="fa fas fa-ticket-alt text-primary mr-5"></i>
                                             <span class="menu-text">Fuel Ticket</span>
-                                            <span class="label label-success label-rounded">2</span>
+                                            <span class="label label-success label-rounded"> {{$count}}</span>
                                         </a>
                                     </li>
                                     <li class="menu-item" aria-haspopup="true">

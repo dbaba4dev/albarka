@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16be16e1-fec4-48fc-bf79-8add0b387a71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/pdf/bootstrap/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/jquery/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/esm/popper-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/esm/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/popper-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/umd/popper-utils.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/umd/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/stations/fuel_modal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/stations/station_modal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/stations/stations.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/pdfview.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/ticket_modal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/albarka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/albarka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/employees/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employees/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/_page-loader.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/_page-loader.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +202,7 @@
       <workItem from="1598087875900" duration="55490000" />
       <workItem from="1598173501664" duration="67631000" />
       <workItem from="1598300796277" duration="20207000" />
-      <workItem from="1598343433276" duration="6299000" />
+      <workItem from="1598343433276" duration="6357000" />
     </task>
     <task id="LOCAL-00001" summary="EmployeeCategory Update and Delete Functionality Added">
       <created>1598015521232</created>
