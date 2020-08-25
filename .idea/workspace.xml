@@ -2,12 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16be16e1-fec4-48fc-bf79-8add0b387a71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/pdf/bootstrap/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf/jquery/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/esm/popper-utils.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/esm/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/popper-utils.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/umd/popper-utils.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pdf/popper.js/dist/umd/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/stations/fuel_modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/stations/station_modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/stations/stations.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/pdfview.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tickets/ticket_modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/albarka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/albarka.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/_topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/_topbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_notifications.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_notifications.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/offcanvas/_quick-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/offcanvas/_quick-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/employees/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employees/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/_page-loader.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/_page-loader.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -136,24 +157,41 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/gladcodes/keygen" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fg3m4Q3P41TFd5uTHIA2Tn85eB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/tickets" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\albarka\resources\views\admin\tickets" />
+      <recent name="C:\laragon\www\albarka\resources\views\admin\stations" />
+      <recent name="C:\laragon\www\albarka\resources\views\admin" />
+      <recent name="C:\laragon\www\albarka\resources\views" />
+      <recent name="C:\laragon\www\albarka\resources\views\admin\employees" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\albarka\public\js" />
       <recent name="C:\laragon\www\albarka\resources\views\layout" />
-      <recent name="C:\laragon\www\albarka\resources\views\admin\employees" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\albarka\resources\views\admin" />
-      <recent name="C:\laragon\www\albarka\resources\views" />
       <recent name="C:\laragon\www\albarka\resources\views\admin\employees" />
     </key>
   </component>
@@ -189,7 +227,9 @@
       <workItem from="1597837316950" duration="35661000" />
       <workItem from="1597997972623" duration="23811000" />
       <workItem from="1598087875900" duration="55490000" />
-      <workItem from="1598173501664" duration="34409000" />
+      <workItem from="1598173501664" duration="67631000" />
+      <workItem from="1598300796277" duration="20207000" />
+      <workItem from="1598343433276" duration="6299000" />
     </task>
     <task id="LOCAL-00001" summary="EmployeeCategory Update and Delete Functionality Added">
       <created>1598015521232</created>
@@ -218,6 +258,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="EmployeeCategory Update and Delete Functionality Added" />
     <option name="LAST_COMMIT_MESSAGE" value="EmployeeCategory Update and Delete Functionality Added" />
   </component>

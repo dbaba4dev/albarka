@@ -470,7 +470,7 @@
             if(stateID)
             {
                 jQuery.ajax({
-                    url : 'state/' +stateID,
+                    url : '/state/' +stateID,
                     type : "GET",
                     dataType : "json",
                     success:function(data)

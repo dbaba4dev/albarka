@@ -23,6 +23,24 @@ Route::group(['middleware'=>['auth']], function (){
     Route::resource('employees', 'EmployeeController');
     Route::resource('employeeCategories', 'CategoryController');
 
+    Route::get('/settings', 'SettingController@settings')->name('settings');
+    Route::post('/settings/update', 'SettingController@updateSettings')->name('update.settings');
+
+    Route::get('/stations', 'SettingController@stations')->name('stations');
+    Route::post('/stations/edit', 'SettingController@stationsEdit')->name('station.edit');
+    Route::post('/station', 'SettingController@newStation')->name('station.store');
+
+    Route::post('/fuel', 'SettingController@newFuel')->name('fuel');
+    Route::get('/fuel/delete/{id}', 'SettingController@deleteFuel')->name('fuel.delete');
+
+    Route::get('/tickets', 'SettingController@ticket')->name('tickets');
+    Route::post('/ticket', 'SettingController@storeTicket')->name('ticket.store');
+    Route::post('/ticket/update', 'SettingController@updateTicket')->name('ticket.update');
+    Route::get('/ticket/view/{id}', 'SettingController@viewTicket')->name('admin.viewTicket');
+
+    Route::get('/settings', 'SettingController@settings')->name('settings');
+    Route::post('/settings/update', 'SettingController@updateSettings')->name('update.settings');
+
     Route::get('/admin/check-pwd', 'AdminController@chkPassword');
     Route::post('/admin/update-password', 'AdminController@updatePassword')->name('update.password');
 });

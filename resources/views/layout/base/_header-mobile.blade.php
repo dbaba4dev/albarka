@@ -3,29 +3,28 @@
     <div class="mobile-logo">
         <a href="{{ url('/') }}">
 
-            @php
-                $kt_logo_image = 'logo-light.png'
-            @endphp
+{{--            @php--}}
+{{--                $kt_logo_image = 'logo-light.png'--}}
+{{--            @endphp--}}
 
-            @if (config('layout.aside.self.display') == false)
+{{--            @if (config('layout.aside.self.display') == false)--}}
 
-                @if (config('layout.header.self.theme') === 'light')
-                    @php $kt_logo_image = 'logo-dark.png' @endphp
-                @elseif (config('layout.header.self.theme') === 'dark')
-                    @php $kt_logo_image = 'logo-light.png' @endphp
-                @endif
+{{--                @if (config('layout.header.self.theme') === 'light')--}}
+{{--                    @php $kt_logo_image = 'logo-dark.png' @endphp--}}
+{{--                @elseif (config('layout.header.self.theme') === 'dark')--}}
+{{--                    @php $kt_logo_image = 'logo-light.png' @endphp--}}
+{{--                @endif--}}
 
-            @else
+{{--            @else--}}
 
-                @if (config('layout.brand.self.theme') === 'light')
-                    @php $kt_logo_image = 'logo-dark.png' @endphp
-                @elseif (config('layout.brand.self.theme') === 'dark')
-                    @php $kt_logo_image = 'logo-light.png' @endphp
-                @endif
+{{--                @if (config('layout.brand.self.theme') === 'light')--}}
+{{--                    @php $kt_logo_image = 'logo-dark.png' @endphp--}}
+{{--                @elseif (config('layout.brand.self.theme') === 'dark')--}}
+{{--                    @php $kt_logo_image = 'logo-light.png' @endphp--}}
+{{--                @endif--}}
 
-            @endif
-
-            <img alt="{{ config('app.name') }}" src="{{ asset('media/logos/'.$kt_logo_image) }}"/>
+{{--            @endif--}}
+            <img alt="{{ config('app.name') }}" src="{{ asset('media/logos/ALBARKA-LOGO-LIGHT.png') }}"/>
         </a>
     </div>
     <div class="d-flex align-items-center">
